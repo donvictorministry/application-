@@ -8,7 +8,7 @@ const h=`<div id="dv38" style="display:none; position:fixed; inset:0; z-index:99
     </div>`;
     
     (function() {
-      var DVv = "1.3";
+      var DVv = "1.5";
       var DVk = "UtilityPro";
 
       var modal = document.getElementById('dv38');
