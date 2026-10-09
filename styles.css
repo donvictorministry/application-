@@ -1,0 +1,368 @@
+:root {
+            --dvd8: #1877F2;
+            --dvd9: #ffffff;
+            --dvda: #ffffff;
+            --dvdb: #000000;
+            --dvda-variant: #f5f5f5;
+            --dvdb-variant: #444444;
+            --dvde: #1877F2;           
+            --dvdf: #B3261E;
+            --dve0: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+            --dve1: 0 1px 2px rgba(0,0,0,0.3), 0 2px 6px 2px rgba(0,0,0,0.15);
+            --dve2: 0 4px 8px 3px rgba(0,0,0,0.15), 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--dvda);
+            color: var(--dvdb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            -webkit-user-select: none;
+            overflow: hidden;
+        }
+
+        .dv3b {
+            width: 100%;
+            max-width: 430px;
+            height: 100vh;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dvda);
+            position: relative;
+            box-shadow: var(--dve2);
+        }
+
+        .dv3c {
+            background-color: var(--dvd8);
+            color: var(--dvd9);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 64px;
+            z-index: 10;
+            box-shadow: var(--dve1);
+        }
+
+        .dv3d {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            margin-right: 8px;
+        }
+
+        .dv3c h1 {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0;
+            flex: 1;
+            text-align: center;
+        }
+
+        .dv3e {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            margin-left: 8px;
+        }
+
+        .dv3e:active { background-color: rgba(255,255,255,0.3); }
+
+        .dv3f {
+            background-color: var(--dvda);
+            border-bottom: 2px solid var(--dvde);
+            padding: 12px 8px;
+            display: none;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            box-shadow: var(--dve0);
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            z-index: 9;
+        }
+
+        .dv3f::-webkit-scrollbar { display: none; }
+        .dv3f.show { display: flex; gap: 12px; }
+
+        .dv40 {
+            min-width: 36px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+            box-shadow: var(--dve0);
+            flex-shrink: 0;
+        }
+
+        .dv40.dv41 {
+            border: 3px solid var(--dvdb);
+            box-shadow: 0 0 0 3px var(--dvd8);
+        }
+
+        .dv42 {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 299;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .dv42.dv5d { display: block; opacity: 1; }
+
+        .dv3a {
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%;
+            width: 260px;
+            background: var(--dvda);
+            z-index: 300;
+            transform: translateX(-100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--dve2);
+            display: flex;
+            flex-direction: column;
+        }
+        .dv3a.dv5d { transform: translateX(0); }
+
+        .dv43 {
+            padding: 24px 16px;
+            background: var(--dvd8);
+            color: var(--dvd9);
+        }
+        .dv43 h2 { font-size: 24px; font-weight: 700; }
+        .dv43 p { font-size: 14px; opacity: 0.9; margin-top: 4px; font-weight: 500; }
+
+        .dv44 {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px 0;
+        }
+
+        .dv45 {
+            padding: 16px 24px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--dvdb);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .dv45:active { background: var(--dvda-variant); }
+        .dv45 svg { width: 24px; height: 24px; fill: var(--dvdb-variant); }
+
+        .dv46 {
+            position: absolute;
+            inset: 0;
+            background: var(--dvda);
+            z-index: 200;
+            display: none;
+            flex-direction: column;
+            transform: translateY(100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dv46.dv5d { display: flex; transform: translateY(0); }
+
+        .dv47 {
+            background: var(--dvda);
+            color: var(--dvdb);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--dvde);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            z-index: 201;
+        }
+        .dv47 h2 { font-size: 18px; font-weight: 700; flex: 1; text-align: center; }
+        .dv48 { background: none; border: none; padding: 8px; cursor: pointer; color: var(--dvdb); display: flex; }
+
+        .dv49 {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px 20px;
+            background: var(--dvda-variant);
+        }
+        
+        .dv4a {
+            background: var(--dvda);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: var(--dve0);
+            margin-bottom: 20px;
+        }
+        .dv4a h3 { color: var(--dvd8); margin-bottom: 12px; font-size: 20px; }
+        .dv4a p { line-height: 1.5; color: var(--dvdb-variant); margin-bottom: 16px; font-size: 18px; font-weight: 500;}
+        .dv4a ul { padding-left: 20px; color: var(--dvdb-variant); line-height: 1.6; font-size: 18px; font-weight: 500; }
+        .dv4a li { margin-bottom: 8px; }
+
+        .dv4b {
+            background: var(--dvda);
+            border-top: 1px solid var(--dvde);
+            padding: 16px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            bottom: 0;
+            z-index: 201;
+        }
+
+        .dv4c {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            background: var(--dvda-variant);
+            border: 2px solid var(--dvde);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dvd8);
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: var(--dve0);
+        }
+                   
+        .dv4c:active { transform: scale(0.9); box-shadow: var(--dve1); background: var(--dvd8); color: var(--dvd9); }
+        .dv4c svg { width: 24px; height: 24px; fill: currentColor; }
+
+        .dv4d { text-align: center; }
+        .dv4e { width: 150px; height: 150px; aspect-ratio: 1; flex-shrink: 0; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 4px solid var(--dvd8); box-shadow: var(--dve1); background: #e0e0e0; display: block; }
+        .dv4f { font-size: 26px; font-weight: 800; color: var(--dvdb); margin-bottom: 4px; }
+        .dv50 { font-size: 16px; font-weight: 700; color: var(--dvd8); margin-bottom: 16px; letter-spacing: 0.5px; }
+        .dv51 { margin-bottom: 16px; }
+        .dv52 { font-size: 19px; font-style: normal; color: var(--dvdb-variant); line-height: 1.5; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .dv52.dv53 { -webkit-line-clamp: unset; }
+        .dv54 { background: none; border: none; color: var(--dvd8); font-size: 20px; font-weight: 800; cursor: pointer; margin-top: 4px; padding: 0; }
+        .dv55 { width: 100%; padding: 14px; background-color: var(--dvda-variant); color: var(--dvd8); border: 2px solid var(--dvd8); border-radius: 20px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; margin-top: 16px; display: block; text-align: center; text-decoration: none; }
+        .dv55:active { background-color: var(--dvd8); color: var(--dvd9); }
+
+        .dv56 { display: flex; justify-content: space-between; padding: 20px 16px; background: var(--dvda); border-radius: 16px; box-shadow: var(--dve0); margin-bottom: 20px; }
+        .dv57 { text-align: center; flex: 1; }
+        .dv57.dv58 { border-left: 2px solid var(--dvda-variant); border-right: 2px solid var(--dvda-variant); }
+        .dv57 h4 { font-size: 22px; font-weight: 800; color: var(--dvd8); margin-bottom: 4px; }
+        .dv57 p { font-size: 12px; font-weight: 700; color: var(--dvdb-variant); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .dv59 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .dv5a { background: var(--dvda-variant); border: 2px solid var(--dvde); padding: 16px; border-radius: 12px; text-align: center; font-weight: 700; color: var(--dvd8); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: var(--dve0); }
+        .dv5a:active { transform: scale(0.95); background: var(--dvd8); color: var(--dvd9); }
+
+        .dv5b { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 0; position: relative; z-index: 1; }
+        .dv5c { display: none; padding: 20px 16px; min-height: 100%; }
+        .dv5c.dv5d { display: block; }
+        
+        .dv5e { background-color: var(--dvda); border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid var(--dvde); box-shadow: var(--dve0); }
+        .dv5f { margin-bottom: 20px; }
+        .dv60 { display: block; font-size: 16px; font-weight: 500; color: var(--dvdb-variant); margin-bottom: 8px; letter-spacing: 0.4px; }
+        .dv61 { position: relative; border: 2px solid var(--dvde); border-radius: 8px 8px 0 0; background-color: var(--dvda-variant); transition: all 0.3s; }
+        .dv61:focus-within { border-color: var(--dvd8); border-width: 2px; background-color: var(--dvda); }
+        .dv61.dv62 { border-color: var(--dvdf); }
+        .dv63, .dv64 { position: absolute; top: 50%; transform: translateY(-50%); color: var(--dvdb); font-weight: 500; font-size: 17px; pointer-events: none; }
+        .dv63 { left: 16px; }
+        .dv64 { right: 16px; }
+        .dv65 { width: 100%; padding: 16px 50px 16px 40px; border: none; outline: none; font-size: 17px; font-weight: 600; color: var(--dvdb); background-color: transparent; font-family: inherit; }
+        .dv65.dv66 { padding: 16px 45px 16px 16px; }
+        .dv67 { color: var(--dvdf); font-size: 14px; font-weight: 500; margin-top: 4px; padding-left: 16px; display: none; }
+
+        .dv68 { display: flex; gap: 8px; margin-bottom: 16px; }
+        .dv69 { flex: 1; padding: 10px; border: 2px solid var(--dvde); background-color: var(--dvda); color: var(--dvdb); border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 17px; transition: all 0.3s; font-family: inherit; }
+        .dv69.dv6a { background-color: var(--dvd8); color: var(--dvd9); border-color: var(--dvd8); }
+        .dv6b { width: 100%; padding: 18px; background-color: var(--dvd8); color: var(--dvd9); border: none; border-radius: 20px; font-size: 17px; font-weight: 700; cursor: pointer; letter-spacing: 0.5px; transition: all 0.3s; box-shadow: var(--dve1); font-family: inherit; }
+        .dv6b:active { box-shadow: var(--dve2); filter: brightness(0.9); }
+
+        .dv6c { background-color: var(--dvda); padding: 10px 16px; margin-bottom: 10px; text-align: right; min-height: 120px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; }
+        .dv6d { position: absolute; top: 0; left: 16px; right: 16px; display: flex; justify-content: space-between; color: var(--dvdb-variant); }
+        .dv6e { background: none; border: none; color: inherit; cursor: pointer; padding: 8px; }
+        .dv6f { color: var(--dvdb); font-size: 42px; font-weight: 500; word-break: break-all; margin-bottom: 4px; line-height: 1.1; }
+        .dv70 { color: var(--dvdb-variant); font-size: 24px; font-weight: 600; min-height: 28px; margin-bottom: 24px; }
+        .dv71 { position: absolute; bottom: 4px; right: 12px; background: none; border: none; color: var(--dvdb-variant); cursor: pointer; padding: 8px; display: flex; align-items: center; justify-content: center; transition: transform 0.15s, color 0.15s; }
+        .dv71:active { transform: scale(0.9); color: var(--dvdb); }
+        .dv72 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 0 16px; }
+        .dv72.dv73 { grid-template-columns: repeat(5, 1fr); gap: 8px; }
+        .dv74 { aspect-ratio: 1.1; border: none; background-color: var(--dvda-variant); color: var(--dvdb); font-size: 24px; font-weight: 600; border-radius: 24px; cursor: pointer; transition: transform 0.15s, background-color 0.15s; font-family: inherit; display: flex; align-items: center; justify-content: center; }
+        .dv74:active { transform: scale(0.92); background-color: #e0e0e0; }
+        .dv74.dv75 { background-color: #f0f0f0; }
+        .dv74.dv76 { background-color: #f0f0f0; color: var(--dvdf); }
+        .dv74.dv77 { background-color: #4285f4; color: #ffffff; }
+        .dv74.dv77.dv78 { background-color: var(--dvd8); }
+        .dv79 { display: none; background-color: var(--dvda); font-size: 16px; }
+        .dv72.dv73 .dv79 { display: flex; }
+        .dv72.dv73 .dv74 { font-size: 20px; border-radius: 16px; }
+
+        .dv7d { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 8px; }
+        .dv7e { text-align: center; font-size: 14px; font-weight: 600; color: #9e9e9e; padding: 8px 0; text-transform: uppercase; letter-spacing: 1px; }
+        .dv7f { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+        .dv80 { width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 16px; font-weight: 500; color: var(--dvdb); cursor: pointer; transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s, box-shadow 0.2s; position: relative; }
+        .dv80.dv81 { background-color: var(--dvd8); color: var(--dvd9); font-weight: 700; }
+        .dv80.dv82 { color: #bdbdbd; }
+        .dv80.dv83::after { content: ''; position: absolute; bottom: 3px; width: 5px; height: 5px; border-radius: 50%; background-color: var(--dvdf); }
+        .dv80.dv81.dv83::after { background-color: #FFD700; }
+        .dv84 { margin-top: 16px; border-top: 2px solid var(--dvde); padding-top: 16px; }
+        .dv85 { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .dv86 { font-size: 13px; color: var(--dvdb-variant); }
+        .dv87 { font-size: 14px; font-weight: 500; color: var(--dvd8); }
+
+        .dv88 { text-align: center; padding: 24px 20px; background-color: var(--dvda-variant); border-radius: 12px; border: 1px solid var(--dvde); margin-bottom: 16px; }
+        .dv89 { font-size: 48px; font-weight: 600; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
+        .dv8a { font-size: 18px; color: var(--dvdb-variant); margin-top: 4px; }
+        .dv8b { display: inline-block; background-color: var(--dvd8); color: var(--dvd9); padding: 4px 12px; border-radius: 12px; font-size: 17px; margin-top: 8px; font-weight: 500; }
+        .dv8c { margin-top: 16px; }
+        .dv8d { display: flex; gap: 8px; align-items: center; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
+        .dv8d input { width: 65px; padding: 12px 8px; border: 2px solid var(--dvde); border-radius: 8px; font-size: 20px; font-weight: 700; text-align: center; font-family: inherit; background-color: var(--dvda); color: var(--dvdb); }
+        .dv8d select { padding: 12px; border: 2px solid var(--dvde); border-radius: 8px; font-size: 18px; font-weight: 600; font-family: inherit; background: var(--dvda); color: var(--dvdb); }
+        .dv8e { margin-top: 16px; }
+        .dv8f { display: flex; justify-content: space-between; align-items: center; padding: 16px; background-color: var(--dvda-variant); border-radius: 12px; margin-bottom: 8px; border: 1px solid var(--dvde); }
+        .dv90 { font-size: 24px; font-weight: 700; }
+        .dv91 { width: 52px; height: 32px; border-radius: 16px; border: 2px solid var(--dvde); background-color: var(--dvda); cursor: pointer; position: relative; transition: all 0.3s; }
+        .dv91.dv5d { background-color: var(--dvd8); border-color: var(--dvd8); }
+        .dv91::after { content: ''; position: absolute; width: 24px; height: 24px; border-radius: 50%; background-color: var(--dvdb-variant); top: 2px; left: 2px; transition: all 0.3s; }
+        .dv91.dv5d::after { left: 22px; background-color: #ffffff; }
+        .dv92 { background: none; border: none; color: var(--dvdf); font-size: 20px; cursor: pointer; padding: 8px; }
+        .dv93 { border: 2px solid var(--dvd8); border-radius: 12px; padding: 16px; margin-top: 16px; background-color: var(--dvda); }
+        .dv94 { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .dv94:last-child { border-bottom: none; }
+        .dv95.dv96 { font-size: 24px; font-weight: 700; color: var(--dvd8); }
+
+        .dv97 { display: flex; background-color: var(--dvda); border-top: 2px solid var(--dvde); box-shadow: 0 -2px 8px rgba(0,0,0,0.1); padding: 0; z-index: 10; position: relative; }
+        .dv98 { flex: 1; padding: 12px 4px 8px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; border: none; background: none; color: var(--dvdb-variant); transition: all 0.3s; font-family: inherit; position: relative; }
+        .dv98.dv5d { color: var(--dvd8); }
+        .dv98.dv5d::before { content: ''; position: absolute; top: 0; left: 20%; right: 20%; height: 3px; background-color: var(--dvd8); border-radius: 0 0 3px 3px; }
+        .dv9a { width: 28px; height: 28px; fill: currentColor; }
+        .dv99 { font-size: 12px; font-weight: 700; letter-spacing: 0.3px; }
+        .dv9b { font-size: 14px; color: var(--dvdb-variant); margin-top: 8px; text-align: center; }
+
+        @media (min-width: 431px) {
+            .dv3b { height: 90vh; height: 90dvh; border-radius: 24px; overflow: hidden; margin: 20px; }
+        }      
