@@ -559,7 +559,7 @@ function dv9c() {
 
             if ('serviceWorker' in navigator) {
                 const swCode = `
-                    const CACHE_NAME = 'utility-pro-v1';
+                    const CACHE_NAME = 'utility-pro-v1.3';
                     self.addEventListener('install', event => {
                         event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll([location.pathname])));
                         self.skipWaiting();
